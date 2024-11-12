@@ -4,7 +4,7 @@ from cities where name like '%ськ%';
 2) select *
 from cities where name like '%донец%';
 
-3) select concat(name, ' ', '(',region,')') as Cities
+3) select concat (name, ' ', '(' ,region, ')') as Cities
 from cities where population > 100000
 order by name ASC;
 
