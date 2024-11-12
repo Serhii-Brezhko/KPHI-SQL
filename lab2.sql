@@ -12,7 +12,8 @@ and population > 500000;
 4) select *
 from cities where (population > 150000 and population < 350000)
 and region in ('E', 'W', 'N')
-order by name ASC limit 20;
+order by name ASC
+limit 20;
 
 5) select *
 from cities where region not in ('E', 'W') 
