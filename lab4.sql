@@ -1,19 +1,27 @@
-1) select name, upper (name) as name_upcase
+-- 1
+select name, upper (name) as upcase_name
 from cities
 order by name ASC
 limit 5 offset 5;
 
-2) select name, char_length (name) as name_length
-from cities where char_length (name) not in (8, 9, 10);
+-- 2
+select name, char_length (name) as length_name
+from cities
+where char_length (name) not in (8, 9, 10)
+order by length_name ASC;
 
-3) select region, sum (population) as pop_region
-from cities where region in ('C', 'S')
-group by region
-order by pop_region;
+-- 3
+select region, sum(population) as pop_sum
+from cities
+where region in ('C', 'S');
 
-4) select region, avg (population) as pop_region
-from cities where region in ('W');
+-- 4
+select region, avg(population) as pop_region
+from cities
+where region in ('W');
 
-5) select count (name)
-from cities where region in ('E')
+-- 5
+select id, name
+from cities
+where region in ('E')
 order by name ASC;
