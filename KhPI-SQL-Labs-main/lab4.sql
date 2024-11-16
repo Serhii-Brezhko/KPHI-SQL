@@ -21,7 +21,6 @@ from cities
 where region in ('W');
 
 -- 5
-select id, name
+select region, count(name) as num_city
 from cities
 where region in ('E')
-order by name ASC;
